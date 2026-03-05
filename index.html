@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMIÈRE | Salón & Estilismo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'lumiere-black': '#1a1a1a',
+                        'lumiere-gray': '#f4f4f4',
+                        'lumiere-gold': '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-white text-lumiere-black antialiased overflow-x-hidden">
+
+    <!-- Navegación -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16 md:h-20">
+            <a href="#" class="font-serif text-xl md:text-2xl tracking-widest font-bold uppercase brand-name">Lumière</a>
+            <div class="hidden md:flex space-x-8 items-center text-xs uppercase tracking-widest">
+                <a href="#home" class="hover:text-lumiere-gold transition">Inicio</a>
+                <a href="#services" class="hover:text-lumiere-gold transition">Servicios</a>
+                <a href="#contact" class="hover:text-lumiere-gold transition">Contacto</a>
+                <a href="#services" class="bg-black text-white px-6 py-2 hover:bg-zinc-800 transition">Reservar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="relative h-[85vh] flex items-center justify-center">
+        <div class="absolute inset-0 bg-zinc-900">
+            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?q=80&w=1974&auto=format&fit=crop" class="w-full h-full object-cover opacity-40">
+        </div>
+        <div class="relative z-10 text-center text-white px-6 reveal active">
+            <p class="text-[10px] uppercase tracking-[0.5em] mb-4 opacity-80">Experiencia de Lujo</p>
+            <h1 class="text-5xl md:text-7xl font-serif mb-8 italic">El Arte del Estilo</h1>
+            <a href="#services" class="inline-block border border-white px-10 py-4 text-xs uppercase tracking-[0.3em] hover:bg-white hover:text-black transition">Explorar Menú</a>
+        </div>
+    </header>
+
+    <!-- Servicios -->
+    <section id="services" class="py-24 bg-lumiere-gray">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-3xl mb-16 reveal">Nuestros Servicios</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="space-y-8 reveal">
+                    <div class="border-b border-zinc-300 pb-4 flex justify-between items-end group">
+                        <div><h3 class="font-serif text-lg">Corte Design</h3><p class="text-xs text-zinc-500">Incluye lavado y masaje</p></div>
+                        <button class="bg-black text-white px-4 py-2 text-[10px] uppercase tracking-tighter hover:bg-zinc-800 transition">Agendar</button>
+                    </div>
+                    <div class="border-b border-zinc-300 pb-4 flex justify-between items-end group">
+                        <div><h3 class="font-serif text-lg">Color Global</h3><p class="text-xs text-zinc-500">Tinte premium sin amoníaco</p></div>
+                        <button class="bg-black text-white px-4 py-2 text-[10px] uppercase tracking-tighter hover:bg-zinc-800 transition">Agendar</button>
+                    </div>
+                </div>
+                <div class="space-y-8 reveal">
+                    <div class="border-b border-zinc-300 pb-4 flex justify-between items-end group">
+                        <div><h3 class="font-serif text-lg">Balayage</h3><p class="text-xs text-zinc-500">Iluminación personalizada</p></div>
+                        <button class="bg-black text-white px-4 py-2 text-[10px] uppercase tracking-tighter hover:bg-zinc-800 transition">Agendar</button>
+                    </div>
+                    <div class="border-b border-zinc-300 pb-4 flex justify-between items-end group">
+                        <div><h3 class="font-serif text-lg">Tratamiento Keratina</h3><p class="text-xs text-zinc-500">Brillo y suavidad extrema</p></div>
+                        <button class="bg-black text-white px-4 py-2 text-[10px] uppercase tracking-tighter hover:bg-zinc-800 transition">Agendar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-black text-white py-12 text-center">
+        <p class="font-serif text-2xl mb-4 tracking-widest uppercase">Lumière</p>
+        <div class="flex justify-center space-x-8 text-[10px] uppercase tracking-widest text-zinc-500 mb-8">
+            <a href="#" class="hover:text-white transition">Instagram</a>
+            <a href="#" class="hover:text-white transition">Facebook</a>
+            <a href="#" class="hover:text-white transition">WhatsApp</a>
+        </div>
+        <p class="text-[9px] text-zinc-600 uppercase tracking-widest">© 2024 Lumière Salon | Estética & Vanguardia</p>
+    </footer>
+
+    <!-- Firebase Analytics Engine -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getFirestore, doc, setDoc, increment } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+
+        const firebaseConfig = JSON.parse(__firebase_config);
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';
+
+        // Ruta de 6 segmentos: artifacts/{id}/public/data/analytics/stats
+        const statsDoc = doc(db, 'artifacts', appId, 'public', 'data', 'analytics', 'stats');
+
+        const Analytics = {
+            user: null,
+
+            async init() {
+                // Paso 1: Auth
+                try {
+                    if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
+                        await signInWithCustomToken(auth, __initial_auth_token);
+                    } else {
+                        await signInAnonymously(auth);
+                    }
+                } catch (e) { console.error("Auth Error:", e); }
+
+                onAuthStateChanged(auth, async (u) => {
+                    if (u) {
+                        this.user = u;
+                        this.trackView();
+                    }
+                });
+
+                // Clics
+                document.body.addEventListener('click', (e) => {
+                    const btn = e.target.closest('button, a');
+                    if (btn) {
+                        const label = btn.innerText.trim() || btn.id || 'Botón';
+                        this.trackClick(label);
+                    }
+                });
+            },
+
+            async trackView() {
+                if (!this.user) return;
+                // Usamos setDoc con merge:true para asegurar que el documento exista
+                await setDoc(statsDoc, { views: increment(1) }, { merge: true });
+            },
+
+            async trackClick(label) {
+                if (!this.user) return;
+                const safeLabel = label.replace(/\./g, '_').replace(/\//g, '_').substring(0, 50);
+                await setDoc(statsDoc, { 
+                    clicks: { [safeLabel]: increment(1) } 
+                }, { merge: true });
+            }
+        };
+
+        // Scroll Reveal
+        const obs = new IntersectionObserver((es) => es.forEach(e => e.isIntersecting && e.target.classList.add('active')), { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+        Analytics.init();
+    </script>
+</body>
+</html>
